@@ -5,4 +5,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "first action!"
+      - uses: actions/checkout@v2
+      - name: Run sh
+      - run: bash ./gcd_test.sh
+      - run: echo "run completed"
